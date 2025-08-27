@@ -16,12 +16,6 @@ Here’s the classification report of the model:
 
 <img width="640" height="547" alt="image" src="https://github.com/user-attachments/assets/c784bb8a-3162-4701-840f-0ecb758510b4" />
 
-## 📂 Project Structure
-breast-cancer-detection/
-│── app.py # Streamlit app
-│── model.py # ML training script
-│── requirements.txt # Dependencies
-│── README.md # Project description
 
 ## 🌐 Live Demo
 
