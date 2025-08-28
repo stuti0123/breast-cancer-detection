@@ -14,7 +14,6 @@ MODEL_DIR = Path("model"); MODEL_DIR.mkdir(exist_ok=True)
 
 def main():
     df = pd.read_csv(DATA_PATH)
-    # last column assumed target
     X = df.iloc[:, :-1]
     y = df.iloc[:, -1]
 
@@ -29,10 +28,10 @@ def main():
         ("clf", LogisticRegression(max_iter=1000, random_state=42))
     ])
 
-    # Train
+    # Training
     pipe.fit(X_train, y_train)
 
-    # Evaluate
+    # Evaluating
     y_pred = pipe.predict(X_test)
     y_proba = pipe.predict_proba(X_test)[:,1]
     cm = confusion_matrix(y_test, y_pred)
@@ -43,7 +42,6 @@ def main():
     print("\nClassification Report:\n", report)
     print(f"ROC AUC: {roc_auc:.3f}")
 
-    # Save artifacts
     joblib.dump(pipe, MODEL_DIR / "model.joblib")
     with open(MODEL_DIR / "feature_names.json", "w") as f:
         json.dump(list(X.columns), f)
