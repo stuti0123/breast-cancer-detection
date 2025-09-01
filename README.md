@@ -4,10 +4,9 @@
 A simple **Streamlit web app** that predicts whether a tumor is **benign** or **malignant** using the **Breast Cancer Wisconsin dataset**.
 
 ## 🚀 Features
-- Train a Logistic Regression model on breast cancer dataset
+- Logistic Regression model trained on breast cancer dataset
 - User-friendly interface built with Streamlit
 - Predicts cancer type based on tumor features
-- Deployed online for easy access
 
 ## 📊 Model Performance
 Here’s the classification report of the model:
